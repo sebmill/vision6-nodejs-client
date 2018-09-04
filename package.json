@@ -1,0 +1,21 @@
+{
+  "name": "vision6-nodejs-client",
+  "version": "0.1",
+  "description": "Dependency-free NodeJS Implementation for Vision6",
+  "main": "src/Vision6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebmill/nodejs-vision6-client.git"
+  },
+  "keywords": [
+    "vision6",
+    "nodejs",
+    "javascript",
+    "api"
+  ],
+  "license": "MIT",
+  "author": "Sebastian Mill"
+}
