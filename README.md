@@ -2,7 +2,7 @@
 
 This Vision6 client is dependency-free and promised-based. It is modelled of Vision6's [PHP client](http://developers.vision6.com.au/files/guide/getting_started/examples.zip) implementation.
 
-The Vision6 API Developer documentation [can be found here](https://developer.vision6.com.au).
+The Vision6 API Developer documentation [can be found here](https://developers.vision6.com.au).
 
 ## Installing
 
