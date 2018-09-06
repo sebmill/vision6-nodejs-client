@@ -10,7 +10,7 @@ const url = require('url');
  */
 function Vision6(api_key, url, version) {
 	if (api_key == undefined || !api_key.match(/[a-z0-9]{64}/)) {
-		throw Error('Invalid API key');
+		throw new Error('Invalid API key');
 	}
 	this.version = version || '3.3';
 	this.url = url || 'https://www.vision6.com.au/api/jsonrpcserver.php?version=' + this.version;
@@ -21,7 +21,7 @@ function Vision6(api_key, url, version) {
 
 Vision6.prototype.invokeMethod = function (method_name) {
 	if (method_name == undefined) {
-		throw Error(`Method required`);
+		throw new Error('Method required');
 	}
 	// convert functions arguments to array and remove first element (the method_name)
 	let parameters = Object.values(arguments).splice(1) || [];
@@ -43,9 +43,6 @@ Vision6.prototype.invokeMethod = function (method_name) {
 		});
 		// capture response
 		var body = '';
-
-		// ignore self signed certificates
-		process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 		// post payload to URL and capture all chunks
 		let req = http.request(options, (res) => {
