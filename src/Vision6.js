@@ -18,7 +18,10 @@ function Vision6(api_key, url, version) {
 	// other default settings
 	this.timeout = 30;
 }
-
+/**
+ * Invokes a Vision6 API call
+ * @param  {string} method_name A Vision6 Method (e.g. addContacts)
+ */
 Vision6.prototype.invokeMethod = function (method_name) {
 	if (method_name == undefined) {
 		throw new Error('Method required');
